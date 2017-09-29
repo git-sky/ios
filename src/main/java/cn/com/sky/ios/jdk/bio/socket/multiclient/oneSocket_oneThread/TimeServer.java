@@ -9,7 +9,7 @@ import java.net.Socket;
  */
 public class TimeServer {
 
-	public static final int port = 8888;
+	public static final int port = 8889;
 
 	public static void main(String[] args) throws IOException {
 		ServerSocket serverSocket = null;

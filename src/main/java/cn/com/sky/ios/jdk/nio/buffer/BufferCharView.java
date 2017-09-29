@@ -1,9 +1,13 @@
 package cn.com.sky.ios.jdk.nio.buffer;
 
+import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.CharBuffer;
 
+/**
+ * ByteBuffer 的 CharBuffer视图。
+ */
 public class BufferCharView {
 	public static void main(String[] argv) throws Exception {
 		ByteBuffer byteBuffer = ByteBuffer.allocate(7).order(ByteOrder.BIG_ENDIAN);
@@ -15,11 +19,11 @@ public class BufferCharView {
 		byteBuffer.put(4, (byte) 0);
 		byteBuffer.put(5, (byte) '!');
 		byteBuffer.put(6, (byte) 0);
-//		println(byteBuffer);
-//		println(charBuffer);
-	}// Print info about a buffer
+		println(byteBuffer);
+		println(charBuffer);
+	}
 
-//	private static void println(Buffer buffer) {
-//		System.out.println("pos=" + buffer.position() + ", limit=" + buffer.limit() + ", capacity=" + buffer.capacity() + ": '" + buffer.toString() + "'");
-//	}
+	private static void println(Buffer buffer) {
+		System.out.println("pos=" + buffer.position() + ", limit=" + buffer.limit() + ", capacity=" + buffer.capacity() + ": '" + buffer.toString() + "'");
+	}
 }
